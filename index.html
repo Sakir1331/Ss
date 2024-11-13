@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدخول</title>
+    <script type="text/javascript">
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "1221") {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("congratulations").style.display = "block";
+            } else {
+                alert("كلمة السر غير صحيحة!");
+            }
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+
+    <div id="loginForm">
+        <h2>ادخل كلمة السر</h2>
+        <input type="password" id="password" placeholder="أدخل كلمة السر" style="padding: 10px; margin: 10px;">
+        <br>
+        <button onclick="checkPassword()" style="padding: 10px 20px; font-size: 16px;">إدخال</button>
+    </div>
+
+    <div id="congratulations" style="display: none;">
+        <h2>مبروك لقد فزت!</h2>
+    </div>
+
+</body>
+</html>
